@@ -93,6 +93,7 @@ newview/llfloatermap.cpp
 newview/llfloatermute.cpp
 newview/llfloaternamedesc.cpp
 newview/llfloaternewim.cpp
+newview/llfloaterobjectfinder.cpp
 newview/llfloateropenobject.cpp
 newview/llfloaterpermissionsmgr.cpp
 newview/llfloaterpostcard.cpp

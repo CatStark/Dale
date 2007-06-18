@@ -104,6 +104,7 @@
 #include "llfloaterlandholdings.h"
 #include "llfloatermap.h"
 #include "llfloatermute.h"
+#include "llfloaterobjectfinder.h"
 #include "llfloateropenobject.h"
 #include "llfloaterpermissionsmgr.h"
 #include "llfloaterpreference.h"
@@ -1715,6 +1716,15 @@ class LLObjectInspect : public view_listener_t
 	bool handleEvent(LLPointer<LLEvent> event, const LLSD& userdata)
 	{
 		LLFloaterInspect::show();
+		return true;
+	}
+};
+
+class LLObjectFinder : public view_listener_t
+{
+	bool handleEvent(LLPointer<LLEvent> event, const LLSD& userdata)
+	{
+		LLFloaterObjectFinder::show();
 		return true;
 	}
 };
@@ -7681,6 +7691,7 @@ void initialize_menus()
 	addMenu(new LLObjectBuy(), "Object.Buy");
 	addMenu(new LLObjectEdit(), "Object.Edit");
 	addMenu(new LLObjectInspect(), "Object.Inspect");
+	addMenu(new LLObjectFinder(), "Object.Finder");
 
 	addMenu(new LLObjectEnableOpen(), "Object.EnableOpen");
 	addMenu(new LLObjectEnableTouch(), "Object.EnableTouch");
